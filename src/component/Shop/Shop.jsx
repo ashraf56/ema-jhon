@@ -12,6 +12,10 @@ fetch('products.json').then(res=>res.json()).then(data => setProducts(data))
 
 },[])
 
+let click=(product)=>{
+    console.log(product);
+        }
+
     return (
         <div className='shop'>
             <div className='porduct container mt-2'>
@@ -19,7 +23,7 @@ fetch('products.json').then(res=>res.json()).then(data => setProducts(data))
                
                products.map(product => <Products
                product={product} key={product.id}
-               
+               click={click}
                ></Products>)
                
                }

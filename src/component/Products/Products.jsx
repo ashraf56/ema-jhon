@@ -11,10 +11,10 @@ const Products = (props) => {
     <img src={img} alt="" className='  object-fit-fill  border rounded w-100' />
     <h5 >{name}</h5>
     <h6 >{seller}</h6> 
-    <p class="card-title">{price}$</p> 
-    <p class="card-text">{category}</p>
+    <p >${price}</p> 
+    <p >{category}</p>
 
-    <a  onClick={()=> click(props.product)} class="btn btn-primary w-100 ">Add to cart</a>
+    <a  onClick={()=> click(props.product)} class="btn btn-primary w-100 bottom-0 ">Add to cart</a>
 </div>
         </div>
     );

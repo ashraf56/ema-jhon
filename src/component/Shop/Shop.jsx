@@ -11,9 +11,9 @@ fetch('products.json').then(res=>res.json()).then(data => setProducts(data))
 
 
 },[])
-
+let [cart ,setCart]=useState([])
 let click=(product)=>{
-    console.log(product);
+  setCart([...cart,product])
         }
 
     return (
@@ -30,6 +30,7 @@ let click=(product)=>{
             </div>
             <div className='cart'>
                 <h3>cart </h3>
+                <h3>cart {cart.length} </h3>
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Products from '../Products/Products';
 import './Shop.css'
 
@@ -29,8 +30,9 @@ let click=(product)=>{
                }
             </div>
             <div className='cart'>
-                <h3>cart </h3>
-                <h3>cart {cart.length} </h3>
+               <Cart
+               cart={cart}
+               ></Cart>
             </div>
         </div>
     );

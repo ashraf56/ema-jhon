@@ -9,7 +9,7 @@ const Products = (props) => {
             <div className=" card h-100 ">
  
     <img src={img} alt="" className='  object-fit-fill  border rounded w-100' />
-    <h5 >{name}</h5>
+    <h5 className='h-50'>{name}</h5>
     <h6 >{seller}</h6> 
     <p >${price}</p> 
     <p >{category}</p>

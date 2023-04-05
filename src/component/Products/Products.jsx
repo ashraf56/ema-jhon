@@ -9,9 +9,9 @@ const Products = (props) => {
 
     return (
         <div className='container'>
-            <div className=" card h-100 ">
+            <div className=" card h-100 p-2 ">
  
-    <img src={img} alt="" className=' object-fit-fill  border rounded w-100' />
+    <img src={img} alt="" className=' mb-2 object-fit-fill  border rounded w-100' />
     <h5 className='h-50'>{name}</h5>
     <h6 >{seller}</h6> 
     <p >${price}</p> 

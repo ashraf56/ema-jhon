@@ -1,3 +1,6 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // use local storage to manage cart data
 const addToDb = id => {
     let shoppingCart = getShoppingCart();
@@ -35,10 +38,18 @@ const getShoppingCart = () => {
 const deleteShoppingCart = () => {
     localStorage.removeItem('shopping-cart');
 }
-
+const notify = () => toast.success("Wow so easy!",{position: "top-center",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",});
 export {
     addToDb,
     removeFromDb,
     getShoppingCart,
-    deleteShoppingCart
+    deleteShoppingCart,
+    notify
 }

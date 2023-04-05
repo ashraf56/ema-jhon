@@ -2,8 +2,11 @@ import React from 'react';
 
 const Products = (props) => {
     // console.log(props.product);
-    let{name,seller,img,ratings,price,category}=props.product
+    let{name,seller,img,price,category}=props.product
    let click=props.click;
+
+   
+
     return (
         <div className='container'>
             <div className=" card h-100 ">
@@ -14,7 +17,7 @@ const Products = (props) => {
     <p >${price}</p> 
     <p >{category}</p>
 
-    <a  onClick={()=> click(props.product)} className="btn btn-primary w-100 bottom-0 ">Add to cart</a>
+    <a  onClick={()=> click(props.product)}  className="btn btn-primary w-100 bottom-0 ">Add to cart</a>
 </div>
         </div>
     );

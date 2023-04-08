@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getShoppingCart, notify } from '../../utilities/fakedb';
+import { addToDb, deleteShoppingCart, getShoppingCart, notify } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Products from '../Products/Products';
 import './Shop.css'
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const Shop = () => {
     let [products,setProducts]=useState([]);
@@ -33,6 +36,11 @@ if(addProduct){
 setCart(savecart)
         },[products])
 
+        let Clearcart=()=>{
+            setCart([]);
+            deleteShoppingCart();
+        }
+        
 
     return (
         <div className='shop'>
@@ -48,8 +56,13 @@ setCart(savecart)
             </div>
             <div className='cart'>
                <Cart
-               cart={cart}
-               ></Cart>
+               cart={cart} clearcart={Clearcart}
+               >
+<Link to='/Order'>
+<button type="button"  className="btn btn-warning w-100  mt-2 fw-bold ">Review Order      <FontAwesomeIcon icon={faArrowAltCircleRight} />        </button>
+</Link>
+
+               </Cart>
             </div>
         </div>
     );

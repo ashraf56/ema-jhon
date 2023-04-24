@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Products = (props) => {
+const Products = (props) => { 
     // console.log(props.product);
     let{name,seller,img,price,category}=props.product
    let click=props.click;
